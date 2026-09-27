@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Log in — TaskForge</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <main class="auth-wrap">
+    <form class="auth-card" action="/login" method="POST" novalidate>
+      <h1>Welcome back</h1>
+      <p class="muted">Log in to manage your tasks.</p>
+
+      <% if (error) { %><div class="alert alert-error"><%= error %></div><% } %>
+
+      <label>Email
+        <input type="email" name="email" value="<%= old.email || '' %>" required />
+      </label>
+      <label>Password
+        <input type="password" name="password" required />
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+      <p class="muted center">New here? <a href="/register">Create an account</a></p>
+    </form>
+  </main>
+</body>
+</html>

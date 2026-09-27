@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard — TaskForge</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <main class="dash">
+    <section class="dash-main">
+      <div class="dash-head">
+        <h1>Your tasks</h1>
+        <button id="quoteBtn" class="btn btn-outline btn-sm">✨ Get inspired (external API)</button>
+      </div>
+      <p id="quoteBox" class="quote-box" hidden></p>
+
+      <form id="taskForm" class="task-form" novalidate>
+        <input type="text" id="taskTitle" placeholder="Add a new task..." maxlength="140" required />
+        <select id="taskPriority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+      <p class="field-error" id="taskFormError"></p>
+
+      <!-- Task 4: simple client-side "routing" between filtered views -->
+      <nav class="filter-tabs" id="filterTabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="active">Active</button>
+        <button class="tab" data-filter="completed">Completed</button>
+      </nav>
+
+      <ul id="taskList" class="task-list"><li class="loading">Loading tasks…</li></ul>
+    </section>
+  </main>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

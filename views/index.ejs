@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TaskForge — Full Stack Internship Project</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <main class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Cognifyz Technologies </p>
+      <h1>Ship tasks. Not chaos.</h1>
+      <p class="lede">
+        TaskForge is a small, real task manager built to demonstrate every stage of a
+        full stack app: server-rendered forms, validation, a RESTful API, authentication,
+        an external API integration, and production-style middleware.
+      </p>
+      <div class="hero-actions">
+        <a href="/register" class="btn btn-primary btn-lg">Create free account</a>
+        <a href="/login" class="btn btn-outline btn-lg">I already have one</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+      </div>
+      <ul class="fake-tasks">
+        <li class="fake-task done"><span class="checkbox">✓</span> Set up Express server</li>
+        <li class="fake-task done"><span class="checkbox">✓</span> Add form validation</li>
+        <li class="fake-task"><span class="checkbox"></span> Build REST API</li>
+        <li class="fake-task"><span class="checkbox"></span> Connect database</li>
+        <li class="fake-task"><span class="checkbox"></span> Wire external API</li>
+      </ul>
+    </div>
+  </main>
+
+  <section class="task-grid">
+    <div class="task-card"><span class="task-num">01–02</span><h3>Forms &amp; Validation</h3><p>HTML forms rendered by Express + EJS, with client and server-side validation and temporary storage.</p></div>
+    <div class="task-card"><span class="task-num">03</span><h3>Responsive UI</h3><p>Custom CSS with transitions, a fluid grid layout, and mobile-first breakpoints.</p></div>
+    <div class="task-card"><span class="task-num">04</span><h3>Dynamic DOM</h3><p>Complex validation rules and live DOM updates driven by vanilla JavaScript.</p></div>
+    <div class="task-card"><span class="task-num">05</span><h3>REST API</h3><p>Full CRUD endpoints (<code>/api/tasks</code>) consumed by the dashboard's front end.</p></div>
+    <div class="task-card"><span class="task-num">06</span><h3>Auth &amp; DB</h3><p>Hashed passwords, sessions, a JSON-file data layer, and authorization checks on every API route.</p></div>
+    <div class="task-card"><span class="task-num">07</span><h3>External API</h3><p>Live third-party quote API integration with rate limiting and graceful error handling.</p></div>
+    <div class="task-card"><span class="task-num">08</span><h3>Server Internals</h3><p>Custom logging middleware, an in-memory cache, and a background job queue.</p></div>
+  </section>
+
+  <footer class="footer">
+    <p>Built for the Cognifyz Technologies Full Stack Development Internship — #cognifyz #cognifyzTech #cognifyzTechnologies</p>
+  </footer>
+</body>
+</html>

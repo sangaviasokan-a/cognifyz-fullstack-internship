@@ -1,0 +1,17 @@
+{
+  "name": "cognifyz-fullstack-internship",
+  "version": "1.0.0",
+  "description": "Cognifyz Technologies - Full Stack Development Internship submission (Tasks 1-8)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "express-session": "^1.18.0"
+  }
+}

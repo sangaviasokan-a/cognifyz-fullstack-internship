@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create account — TaskForge</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <main class="auth-wrap">
+    <form class="auth-card" id="registerForm" action="/register" method="POST" novalidate>
+      <h1>Create your account</h1>
+      <p class="muted">Task 1 &amp; 2: server-rendered form, client + server validation.</p>
+
+      <% if (error) { %><div class="alert alert-error"><%= error %></div><% } %>
+
+      <label>Full name
+        <input type="text" name="name" value="<%= old.name || '' %>" required minlength="2" />
+      </label>
+      <label>Email
+        <input type="email" name="email" value="<%= old.email || '' %>" required />
+      </label>
+      <label>Password
+        <input type="password" name="password" id="password" required minlength="8" />
+        <small class="hint" id="pwHint">At least 8 characters, 1 uppercase letter, 1 number.</small>
+      </label>
+      <label>Confirm password
+        <input type="password" name="confirmPassword" id="confirmPassword" required />
+      </label>
+      <p class="field-error" id="clientError"></p>
+
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+      <p class="muted center">Already have an account? <a href="/login">Log in</a></p>
+    </form>
+  </main>
+
+  <script src="/js/validate.js"></script>
+</body>
+</html>
